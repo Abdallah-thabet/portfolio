@@ -1,0 +1,24 @@
+{% extends 'music/base.html' %}
+{% block content %}
+ <div class="row">
+         <div class="col-md-4 mx-auto mt-5">
+            <div class="myform form ">
+               <form action="" method="POST" enctype="Multipart/form-data">
+               {% csrf_token %}
+                  <div class="form-group">
+                     <input type="text" name="singer"  class="form-control my-input" id="singer_name" placeholder="Singer Name">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="title"  class="form-control my-input" id="album_title" placeholder="Album Title">
+                  </div>
+                  <div class="form-group">
+                     <input type="text" name="genre" id="genre"  class="form-control my-input" placeholder="Genre">
+                  </div>
+                  <div class="text-center ">
+                     <button type="submit" name="Create Album"class=" btn btn-primary">Create The Album</button>
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+{% endblock %}

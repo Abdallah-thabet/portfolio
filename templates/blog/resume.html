@@ -1,0 +1,21 @@
+{% extends 'blog/base.html' %}
+{% block title %}Resume{% endblock %}
+{% block content %}
+{% load static %}
+<body class='container badge-dark'>
+    <div class="container mt-5 text-center">
+        <p>I will be so happy to be part of a special company.</p>
+        <a type="button" class="btn btn-primary" href="{% static 'Abdallah Resume.pdf'%}">My Resume</a>
+    </div>
+    <div class="container text-center mt-5">
+        <p>Some Of My Projects</p>
+        <a type="button" href="/musicApp/home/" class="btn btn-primary">Music Website</a>
+        <a type="button" href="/schoolSystemApp/home/" class="btn btn-primary">School System</a>
+    </div>
+    <div class='col text-center mt-5 mb-5'>
+        <p>I'm so happy to learn a New Tings everyday</p>
+        <p>I'm really excited to Volunteer as a Web Developer, please give me<br> a feedback and tips to improve my self, I appreciate it.</p>
+        <img class="container" src={% static 'work.png' %}>
+    </div>
+</body>
+{% endblock %}

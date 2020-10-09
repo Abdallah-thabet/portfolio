@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta cahrset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+    <header class="navbar bg-dark navbar-dark">
+        <a class="navbar-brand" href="/schoolSystemApp/home/">School</a>
+        <h5 class="mt-2 text-center text-light">{% block title %}{% endblock %}</h5>
+        <a class="float-right text-light" href="#">Contact Us</a>
+    </header>
+    <div>{% block content %}{% endblock %}</div>
+</body>
+</html>

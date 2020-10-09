@@ -1,0 +1,30 @@
+{% extends 'music/base.html' %}
+{% block content %}
+<div class="row">
+    <div class="col">
+        <div class="container ml-1">
+            <h1 class="mt-5 text-primary"><span>Album Name: </span>{{ instance.title }}</h1>
+            <h2 class="text-primary"><span>Singer Name: </span>{{ instance.singer }}</h2>
+            <h3 class="text-primary"><span>Genre: </span>{{ instance.genre }}</h3>
+            <img class="img-fluid" alt="Responsive image" src="/media/{{ instance.logo }}">
+        </div>
+    </div>
+    <div class="col">
+        <div class="rounded container bg-primary mt-5">
+        {% for song in instance.song_set.all %}
+        <br>
+            <div class="container row">
+                <div class="card border-0 ml-4" style="width: 600px;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ song.title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ instance.singer }}</h6>
+                        <p class="card-text">{{ song.description }}</p>
+                        <button class="btn btn-primary"><a href="/media/{{ song.file }}" class="text-light">Download</a></button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+{% block title %}Contact Page{% endblock %}
+{% block content %}
+<body class="badge-dark">
+<div class="container">
+    <h2 class="text-color">Send Me a Message</h2>
+    <form action="" method="POST">
+        {% csrf_token %}
+        {% for hidden in form.hidden_fields %}
+        {{ hidden }}
+        {% endfor %}
+
+        {% for field in form.visible_fields %}
+        <div class="form-group">
+            {{ field.errors }}
+            <lable class="text-color">{{ field.label_tag }}</lable>
+            <p>{{ field }}</p>
+        </div>
+        {% endfor %}
+        <button type="reset" class="btn btn-secondary">Reset</button>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+</div>
+{% endblock %}
